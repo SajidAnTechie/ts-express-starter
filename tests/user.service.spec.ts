@@ -5,7 +5,7 @@ jest.mock('@/models/user.model');
 describe('Create User', () => {
   test('it should return new created user with status 200', () => {
     const users: User = {
-      firstName: 'Rahul',
+      firstName: 'Sajid',
       lastName: 'Ansari',
       email: 'sajidansari33272@gmail.com',
       password: '123344',
@@ -16,6 +16,7 @@ describe('Create User', () => {
       users
     );
     const result = find();
+
     expect(result).toStrictEqual(users);
   });
 });
