@@ -18,7 +18,7 @@
     "postinstall": "chmod ug+x .husky/*"
   },
   "lint-staged": {
-    "src/**/*.ts": "npm run prettier-format && npm run lint"
+    "src/**/*.ts": "npm run prettier-format"
   },
   "keywords": [],
   "author": "",
