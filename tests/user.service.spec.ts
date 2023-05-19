@@ -16,7 +16,6 @@ describe('Create User', () => {
       users
     );
     const result = find();
-
     expect(result).toStrictEqual(users);
   });
 });
