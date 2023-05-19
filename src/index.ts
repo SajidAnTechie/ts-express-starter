@@ -8,7 +8,7 @@ const server = app.listen(port, () =>
 );
 
 // Catch unhandled rejections
-process.on('unhandledRejection', (err: Error, promise) => {
+process.on('unhandledRejection', (err: Error) => {
   logger.error(`${err.message}`);
   //close the server
   server.close(() => process.exit(1));

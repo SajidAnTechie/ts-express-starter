@@ -1,6 +1,5 @@
 import BaseError from '@/errors/baseError';
 import HttpStatus from 'http-status-codes';
-import logger from './logger';
 function buildError(err: any) {
   if (err.isJoi || err instanceof SyntaxError) {
     return {
