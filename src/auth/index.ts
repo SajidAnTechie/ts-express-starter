@@ -1,10 +1,11 @@
+import appConfig from '@/config/appConfig';
 import TokenError from '@/errors/tokenError';
 import { NextFunction, Response } from 'express';
 import jwt, { JsonWebTokenError } from 'jsonwebtoken';
 import BadRequestError from '@/errors/badRequestError';
 import { RequestWithUser } from '@/interfaces/express.interface';
 
-const SECRETE_KEY = process.env.JWT_TOKEN_SECRETE_KEY;
+const SECRETE_KEY = appConfig.jwtSecreteKey;
 export function auth(req: RequestWithUser, res: Response, next: NextFunction) {
   const {
     headers: { authorization }

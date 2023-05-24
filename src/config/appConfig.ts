@@ -11,5 +11,6 @@ function getEnv(key: string): string {
 export default {
   appEnv: getEnv('NODE_ENV') || 'development',
   port: Number(getEnv('PORT')),
-  apiBaseUrl: getEnv('API_BASE_PATH')
+  apiBaseUrl: getEnv('API_BASE_PATH'),
+  jwtSecreteKey: getEnv('JWT_TOKEN_SECRETE_KEY')
 };
