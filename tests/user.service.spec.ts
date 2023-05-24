@@ -1,5 +1,5 @@
 import { find } from '@/services/user.service';
-import { fetchUsers } from '@/models/user.model';
+import * as UserModel from '@/models/user.model';
 import { User } from '@/interfaces/user.interface';
 jest.mock('@/models/user.model');
 describe('Create User', () => {
@@ -12,9 +12,9 @@ describe('Create User', () => {
       updateAt: new Date(),
       createdAt: new Date()
     };
-    (fetchUsers as jest.MockedFunction<typeof fetchUsers>).mockReturnValue(
-      users
-    );
+    (
+      UserModel.find as jest.MockedFunction<typeof UserModel.find>
+    ).mockReturnValue(users);
     const result = find();
     expect(result).toStrictEqual(users);
   });
