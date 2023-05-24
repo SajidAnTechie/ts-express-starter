@@ -1,6 +1,6 @@
-import { fetchUsers } from '@/models/user.model';
+import * as User from '@/models/user.model';
 
 export function find() {
-  const users = fetchUsers();
+  const users = User.find();
   return users;
 }

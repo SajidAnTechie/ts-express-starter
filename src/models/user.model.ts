@@ -1,6 +1,6 @@
 import { User } from '@/interfaces/user.interface';
 
-export function fetchUsers() {
+export function find() {
   const users: User = {
     firstName: 'Sajid',
     lastName: 'Ansari',
