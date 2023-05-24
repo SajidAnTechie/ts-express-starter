@@ -26,5 +26,4 @@ You can go to `https://localhost:5000`
 
 ## For production build and Running
 
-1. Create a production build by running `npm run build`
-2. Run production server by running `node dist/src/index.js`
+1. Create a production build and start the server by running `npm start`
